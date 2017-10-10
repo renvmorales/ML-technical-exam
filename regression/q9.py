@@ -1,13 +1,15 @@
-# Construa uma árvore de regressão para estimar o valor de Y na tupla 
-# [245,4,9700,4600,1835,?]. Use todos os dados disponíveis e faça com 
-# que a altura máxima da árvore seja igual a 3.
+# Utilizando um regressor (não paramétrico) k-NN, com k=5 vizinhos e 
+# baseado em distâncias euclidianas, obter Y para a tupla 
+# [245,4,9700,4600,1835,?].
+
 
 
 # import libraries
 import numpy as np 
 import pandas as pd 
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.model_selection import LeaveOneOut
+from sklearn.neighbors import KNeighborsRegressor
+# from sklearn.model_selection import LeaveOneOut
+
 
 
 
@@ -26,16 +28,18 @@ Y = data[:,-1]
 
 
 
-# create a regression tree model object
-regTree = DecisionTreeRegressor(max_depth=3)
+# create a KNN regression model
+neigh = KNeighborsRegressor(n_neighbors=5)
+
+
 
 # train the model with all data
-regTree.fit(X, Y)
+neigh.fit(X, Y)
 
 
 # input sample to predict
 xpred = np.array([245,4,9700,4600,1835])
-ypred = regTree.predict(np.reshape(xpred, (1, -1) ))
+ypred = neigh.predict(np.reshape(xpred, (1, -1) ))
 
 
 print('\nInput sample:\n', xpred)
@@ -50,7 +54,7 @@ print('\nPredicted value by regression tree: %.3f' % (ypred))
 # uncomment down here to check the one-leave-out cross validation analysis
 
 
-# Ypred = regTree.predict(X)
+# Ypred = neigh.predict(X)
 # print('Training rmse: %.3f' % (np.sqrt(((Y-Ypred)**2).mean())))
 
 
@@ -65,8 +69,8 @@ print('\nPredicted value by regression tree: %.3f' % (ypred))
 # for train_index, test_index in loo.split(X):
 # 	X_train, Y_train = X[train_index], Y[train_index]	
 # 	X_test, Y_test = X[test_index], Y[test_index]
-# 	regTree.fit(X_train, Y_train)
-# 	Ypred = regTree.predict(X_test)
+# 	neigh.fit(X_train, Y_train)
+# 	Ypred = neigh.predict(X_test)
 # 	rmse.append( np.sqrt(((Ypred-Y_test)**2).mean()) )
 # 	# rmse.append(np.sqrt(mean_squared_error(Y_test, Ypred)))
 
