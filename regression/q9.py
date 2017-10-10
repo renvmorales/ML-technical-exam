@@ -1,6 +1,6 @@
-# Utilizando um regressor (não paramétrico) k-NN, com k=5 vizinhos e 
-# baseado em distâncias euclidianas, obter Y para a tupla 
-# [245,4,9700,4600,1835,?].
+# Use a non-parametric k-NN regressor with k=5 neighbors based on 
+# euclidian distances to estimate an output of the tuple 
+# [245,4,9700,4600,1835].
 
 
 
