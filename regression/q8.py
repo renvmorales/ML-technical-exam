@@ -6,9 +6,7 @@
 # import libraries
 import numpy as np 
 import pandas as pd 
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import LeaveOneOut
-from sklearn.metrics import mean_squared_error
+from sklearn.tree import DecisionTreeRegressor
 
 
 
@@ -23,3 +21,6 @@ data = df.as_matrix()
 # select input and output from data
 X = data[:,0:-1]
 Y = data[:,-1]
+
+
+
