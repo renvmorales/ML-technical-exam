@@ -1,6 +1,7 @@
-# Estime a capacidade de generalização de um regressor linear, 
-# Y=f(X1, X2, ..., X5), sem usar regularização, via validação cruzada 
-# Leave-One-Out.
+# Estimate a generalization measure from the linear regression model  
+# Y=f(X1, X2, ..., X5) with no regularization, and using 
+# leave-one-out cross-validation.
+
 
 
 # import libraries
