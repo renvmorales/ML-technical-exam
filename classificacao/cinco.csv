@@ -1,0 +1,15 @@
+Aparencia,Temperatura,Umidade,Vento,Classe
+Ensolarado,Quente,Alta,Falso,Nao
+Ensolarado,Quente,Alta,Verdadeiro,Nao
+Chuvoso,Frio,Normal,Verdadeiro,Nao
+Ensolarado,Morna,Alta,Falso,Nao
+Chuvoso,Morna,Alta,Verdadeiro,Nao
+Nublado,Quente,Alta,Falso,Sim
+Chuvoso,Morna,Alta,Falso,Sim
+Chuvoso,Frio,Normal,Falso,Sim
+Nublado,Frio,Normal,Verdadeiro,Sim
+Ensolarado,Frio,Normal,Falso,Sim
+Chuvoso,Morna,Normal,Falso,Sim
+Ensolarado,Morna,Normal,Verdadeiro,Sim
+Nublado,Morna,Alta,Verdadeiro,Sim
+Nublado,Quente,Normal,Falso,Sim

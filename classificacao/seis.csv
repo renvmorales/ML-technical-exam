@@ -1,0 +1,13 @@
+Sexta/Sabado;Faminto;Clientes;Tipo;Espera
+Nao;Sim;Cheio;Tailandes;Nao
+Sim;Nao;Cheio;Frances;Nao
+Nao;Nao;Nenhum;Hamburguer;Nao
+Sim;Nao;Cheio;Hamburguer;Nao
+Sim;Sim;Cheio;Italiano;Nao
+Nao;Nao;Nenhum;Tailandes;Nao
+Nao;Sim;Alguns;Frances;Sim
+Nao;Nao;Alguns;Hamburguer;Sim
+Sim;Sim;Cheio;Tailandes;Sim
+Nao;Sim;Alguns;Italiano;Sim
+Nao;Sim;Alguns;Tailandes;Sim
+Sim;Sim;Cheio;Hamburguer;Sim
