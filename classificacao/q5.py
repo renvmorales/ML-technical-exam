@@ -1,6 +1,5 @@
-# Classificar a tupla [ensolarado, quente, normal, verdadeiro] pelo 
-# classificador bayesiano simples (Naive Bayes).
-
+# Classify the tuple [ensolarado, quente, normal, verdadeiro] using 
+# Naïve Bayes classifier.
 
 
 
@@ -8,8 +7,6 @@
 import numpy as np 
 import pandas as pd 
 from sklearn.naive_bayes import GaussianNB
-
-
 
 
 
