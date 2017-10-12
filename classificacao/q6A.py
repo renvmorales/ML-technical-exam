@@ -1,6 +1,5 @@
-# Obter a árvore de decisão, sem nenhuma poda e selecionando-se os 
-# atributos pelo critério do ganho da informação, para classificar a 
-# tupla [Sim,Sim,Cheio,Francês].
+# Use a decision tree classifier, with no pruning, and entropy gain 
+# criterion to classify the tuple [Sim,Sim,Cheio,Francês].
 
 
 
