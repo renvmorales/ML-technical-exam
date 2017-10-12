@@ -80,3 +80,8 @@ print('\nPredicted value by Naive Bayes classifier: ',
 	['Nao', 'Sim'][int(ypred_nom)])
 
 
+
+
+# compute the probability estimates on the output for the given input
+print('\nProbability estimates on the output:\n ', 
+	gnb.predict_proba([xpred_nom]))
