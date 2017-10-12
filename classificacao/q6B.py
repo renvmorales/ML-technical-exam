@@ -1,8 +1,7 @@
-# Deseja-se classificar um novo exemplo xt=[Sim,Sim,Alguns,Italiano]. 
-# Considere que todos os seus atributos sejam nominais. Pede-se 
-# classificar xt de acordo com o método dos vizinhos mais próximos 
-# (k-NN, com k=3). Utilize a medida de dissimilaridade baseada no 
-# coeficiente de casamento simples para um espaço p-dimensional
+# Consider the new example xt=[Sim,Sim,Alguns,Italiano] with nominal 
+# attributes. Classify xt according a k-NN algorithm (k=3) with 
+# anti-similarity Hamming metric.
+
 
 
 
