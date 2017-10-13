@@ -28,7 +28,6 @@ def encode_units(x):
         return 1
 
 
-
 # apply the encoder to the dataframe
 df_onehot = df.applymap(encode_units)
 print('Original Transaction table:\n')
@@ -37,10 +36,18 @@ print(df_onehot.head())
 
 
 
-fq_itemsets = apriori(df_onehot, min_support=0.01, use_colnames=True)
-print('\nFrequent item sets:\n', fq_itemsets.head())
+# list all support values in descending order
+#    OBS: support here is computed with respect to a single, or a set
+#    items. However, to find a support rule just assemble antescedant and
+# 	 consequent items as a single item set.
+fq_itemsets = apriori(df_onehot, min_support=0.3, use_colnames=True)
+print('\nFrequent item sets:\n', 
+	fq_itemsets.sort_values(by='support', ascending=False).head(10))
 
 
 
-rules = association_rules(fq_itemsets, metric="lift", min_threshold=.1)
-print('\nAssociation rules:\n',rules.head(20))
+
+# list confidence and lift metrics with respect to the association rules
+rules = association_rules(fq_itemsets, metric="confidence", min_threshold=0.3)
+print('\nAssociation rules:\n',
+	rules.sort_values(by='lift', ascending=False).head(10))
